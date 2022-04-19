@@ -1,0 +1,6 @@
+// Показ всех повторяющихся Фамилий с Именем
+SELECT Surname, Name, COUNT(*) AS `count` FROM sportsmen GROUP BY Surname, Name HAVING `count`> 1
+
+
+// Показ всех повторяющихся Фамилий
+SELECT Surname, Name FROM sportsmen WHERE Surname IN ( SELECT Surname FROM sportsmen GROUP BY Surname HAVING COUNT(*) > 1)

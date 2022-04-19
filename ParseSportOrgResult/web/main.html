@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ParserSportOrgResult</title>
+
+    <script src="eel.js"></script>
+    <script src="jquery-3.5.1.min.js"></script>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <div class="form">
+        <div class="form__group">
+            <h2>Подключение к БД</h2>
+            <div class="form__bd">
+                <div>
+                    <label>Хост</label>
+                    <input type="text" placeholder="Хост" tabindex="1" id="host" class="bd_host" required>
+                </div>
+                 <div>
+                    <label>Логин</label>
+                    <input type="text" placeholder="Логин" tabindex="2" class="bd_login" required>
+                </div>
+                <div>
+                    <label>Пароль</label>
+                    <input type="password" placeholder="Пароль" tabindex="3" class="bd_password" required>
+                </div>
+                <div>
+                    <label>БД</label>
+                    <input type="text" placeholder="База данных" tabindex="4" class="bd_name" required>
+                </div>
+            </div>
+        </div>
+        <div class="form__bd-connect">
+             <div class="form__bd-accept">
+                <h4 class="h4">Подключено</h4>
+                 <img src="img/accept.png" alt="connection Ok" class="form__img">
+            </div>
+            <div class="form__bd-no-entry">
+                <h4>Подключение не удалось</h4>
+                <img src="img/no-entry.png" alt="connection No" class="form__img">
+            </div>
+        </div>
+        <div class="form__button">
+            <button id="connect_to_bd" tabindex="4" class="button">Подключиться</button>
+        </div>
+    </div>
+
+    <div class="line-block"></div>
+
+    <div class="form form_parsing">
+        <div class="form__group">
+            <h2>Парсинг</h2>
+            <div class="form__files">
+                <input type="file" tabindex="5" id="input-file" class="input__file" accept="text/html" required multiple>
+                <label for="input-file" >
+                    <span class="input__file-button-text">Выберите файл</span>
+                </label>
+            </div>
+            <div class="form__table">
+                <select tabindex="6" id="table" required>
+                    <option value = "table1" selected>Таблица1</option>
+                    <option value = "table2">Таблица2</option>
+                    <option value = "table3" >Таблица3</option>
+                </select> <br>
+                <label for="table">Выбор таблицы выгрузки</label>
+            </div>
+        </div>
+        <div class="form__file-no">
+                <h4>Выберите файл</h4>
+                <img src="img/no-file.png" alt="No file" class="form__img">
+        </div>
+         <div class="form__parse-yes">
+                <h4>Файл успешно загружен</h4>
+                <img src="img/yes-parsing.png" alt="read file yes" class="form__img">
+        </div>
+        <div class="form__parse-was">
+                <h4>Файл уже был ранее загружен</h4>
+                <img src="img/was-parsing.png" alt="read file was" class="form__img">
+        </div>
+        <div class="form__parse-no">
+                <h4></h4>
+                <img src="img/no-parsing.png" alt="read file No" class="form__img">
+        </div>
+        <div class="form__button">
+            <button id="send_to_bd" tabindex="7" class="button">Выгрузить</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+</html>

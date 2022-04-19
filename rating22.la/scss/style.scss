@@ -1,0 +1,34 @@
+﻿@import "_nullstyle.scss";
+@import "_header.scss";
+@import "_main.scss";
+@import "_footer.scss";
+
+html {
+  font-family: 'Times New Roman', Times, serif;
+  // font-family: 'Helvetica';
+  // font-family: Roboto, -apple-system, sans-serif;
+}
+  
+body {
+  // background-color: #DBE2EF;
+  // background-color: #f2f2f2;
+  background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+  background: linear-gradient(to right, #25c481, #25b7c4);
+  touch-action: manipulation; //отключить приближение на телефоне 
+}
+
+.container {
+  max-width: 1100px;
+  padding: 0 20px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#page-2 {
+  display: none;
+  width: 100%;
+}
+
+.white {
+  color: white;
+}
